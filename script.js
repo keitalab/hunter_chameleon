@@ -7,10 +7,10 @@ function add_data(jsonObj) {
 }
 
 function download_data() {
-    let loghead = "id,score,hit_num,hit_rate\n";
+    let loghead = "id,playtime,score,hit_num,hit_rate\n";
     let logdata = "";
     datas.map(function (d) {
-        logdata += d.id + "," + d.score + "," + d.hit_num + "," + d.hit_rate + "\n";
+        logdata += d.id + "," + d.playtime + "," + d.score + "," + d.hit_num + "," + d.hit_rate + "\n";
     });
 
     const filename = getNow() + ".csv";
