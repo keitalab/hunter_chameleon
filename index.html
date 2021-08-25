@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Hunter-Chameleon | Open Videogame Library</title>
+    <title>{{{PRODUCT_NAME}}} | Open Videogame Library</title>
     <link rel="shortcut icon" href="OVGLTemplate/icon.jpeg">
     <link rel="stylesheet" href="OVGLTemplate/style.css">
 </head>
@@ -24,21 +24,21 @@
         <div id="unity-footer">
             <div id="unity-webgl-logo"></div>
             <div id="unity-fullscreen-button"></div>
-            <div id="unity-build-title">Hunter-Chameleon</div>
+            <div id="unity-build-title">{{{PRODUCT_NAME}}}</div>
         </div>
     </div>
     <script src="script.js"></script>
     <script>
         var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/hunter_chameleon.loader.js";
+        var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
         var config = {
-            dataUrl: buildUrl + "/hunter_chameleon.data.unityweb",
-            frameworkUrl: buildUrl + "/hunter_chameleon.framework.js.unityweb",
-            codeUrl: buildUrl + "/hunter_chameleon.wasm.unityweb",
+            dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+            frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+            codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
             streamingAssetsUrl: "StreamingAssets",
-            companyName: "Open Videogame Library",
-            productName: "Hunter-Chameleon",
-            productVersion: "1.0",
+            companyName: "{{{ COMPANY_NAME }}}",
+            productName: "{{{ PRODUCT_NAME }}}",
+            productVersion: "{{{ PRODUCT_VERSION }}}",
         };
 
         var container = document.querySelector("#unity-container");
@@ -57,8 +57,8 @@
                 mobileWarning.style.display = "none";
             }, 5000);
         } else {
-            canvas.style.width = "960px";
-            canvas.style.height = "600px";
+            canvas.style.width = "1920px";
+            canvas.style.height = "1080px";
         }
         loadingBar.style.display = "block";
         var script = document.createElement("script");
